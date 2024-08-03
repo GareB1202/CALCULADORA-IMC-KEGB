@@ -1,35 +1,54 @@
-while True:
-    try:
-        peso = float (input("Ingrese su peso:"))
-        if peso <= 0:
-            print("El peso debe ser mayor a 0")
-        else:
-            break
-    except ValueError:
-        print("El peso debe ser un numero")
-        
-    while True:
-        try:
-            altura = float(input("Ingrese su altura:"))
-            if altura <= 0:
-                print("La altura debe ser mayor que cero")
-            else:
-                break
-        except ValueError:
-            print("La altura debe ser un numero")
-            
-    IMC = peso / (altura **2)
-    
-    print("Su IMC es: {:2f}".format(IMC))
 
-    if IMC < 18.5:
-        print("Usted tiene bajo peso")
-    elif IMC < 25:
-        print ("Usted tiene un peso normal")
-    elif IMC < 30:
-        print("Usted tiene sobrepeso")
+
+
+while True:
+
+   
+    
+    n = input ("cual es tu nombre?")
+    
+    e = int(input("cual es tu edad?"))
+  
+    
+    a = float(input("cual es tu estatura?"))
+         
+    
+    est = a
+    
+    k = float(input("cual es tu peso?"))
+ 
+                       
+    
+    IMC = k/est**2
+    
+    if(e < 18):
+        print("usted es menor de edad")
+        
     else:
-        print("Usted tiene obesidad")
+        print("usted es mayor de edad")
+        
+
+    print("IMC: " + str(IMC) )
+        
+                                 
+    
+    if IMC >= 0 and IMC < 16.00:
+        print ("Delgadez severa")
+    elif IMC >= 16.00 and IMC < 17.00:
+        print ("Delgadez moderada")
+    elif IMC >= 17.00 and IMC < 18.50:
+        print ("Delgadez leve")
+    elif IMC >= 18.50 and IMC < 25.00:
+        print ("Normal")
+    elif IMC >= 25.00 and IMC < 30.00:
+        print ("Sobrepeso")
+    elif IMC >= 30.00 and IMC < 34.99:
+        print ("obesidad leve")
+    elif IMC >= 35.00 and IMC < 39.00:
+        print ("obesidad media")
+    elif IMC >= 40.00:
+        print ("obesidad morbida") 
+           
            
 
     
